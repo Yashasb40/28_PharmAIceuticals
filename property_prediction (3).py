@@ -513,7 +513,6 @@ truncate_transform = transforms.TruncateProtein(max_length=200, random=False)
 protein_view_transform = transforms.ProteinView(view="residue")
 transform = transforms.Compose([truncate_transform, protein_view_transform])
 
-Explain
 from torchdrug import datasets
 
 dataset = datasets.BetaLactamase("~/protein-datasets/", atom_feature=None, bond_feature=None, residue_feature="default", transform=transform)
